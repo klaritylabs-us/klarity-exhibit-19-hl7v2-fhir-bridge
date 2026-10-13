@@ -1,0 +1,19 @@
+[package]
+name = "klarity-exhibit-19-hl7v2-fhir-bridge"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "HL7 v2 to FHIR bridge checks"
+publish = false
+
+[lib]
+name = "hl7v2_fhir"
+path = "src/lib.rs"
+
+[[bin]]
+name = "validate-bridge"
+path = "src/bin/validate_bridge.rs"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
